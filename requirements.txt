@@ -1,0 +1,6 @@
+tiktoken
+openai
+langchain
+duckduckgo-search
+google-search-results
+python-dotenv
