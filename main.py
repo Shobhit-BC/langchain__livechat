@@ -13,15 +13,9 @@ load_dotenv()
 # initializing duckduckgo serach tool
 ddg = DuckDuckGoSearchRun()
 
-# creating serpapi serach tool
-search = SerpAPIWrapper(serpapi_api_key="6721671ae902527f1dd30908e1ded3aba9a8a79bf0864179950e99a7244b6edd")
-serp=Tool(
-        name = "Serp Api Search",
-        func=search.run,
-        description="useful for when you need to answer questions about current events or the current state of the world"
-    )
 
-tools = [serp,ddg]
+
+tools = [ddg]
 
 turbo_llm = ChatOpenAI(
     temperature=0,
