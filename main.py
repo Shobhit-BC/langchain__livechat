@@ -14,7 +14,8 @@ load_dotenv()
 ddg = DuckDuckGoSearchRun()
 
 # creating serpapi serach tool
-search = SerpAPIWrapper(serpapi_api_key="6721671ae902527f1dd30908e1ded3aba9a8a79bf0864179950e99a7244b6edd")
+serpapi_api_key=os.getenv('OPENAI_API_KEY')
+search = SerpAPIWrapper(serpapi_api_key)
 serp=Tool(
         name = "Serp Api Search",
         func=search.run,
